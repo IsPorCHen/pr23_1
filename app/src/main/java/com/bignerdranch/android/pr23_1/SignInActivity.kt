@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 
 class SignInActivity : WearableActivity() {
@@ -27,8 +28,7 @@ class SignInActivity : WearableActivity() {
                 startActivity(intent)
             }
             else {
-                Snackbar.make(it, "Обнаружены пустые поля", Snackbar.LENGTH_LONG)
-                    .show()
+                Toast.makeText(this, "Обнаружены пустые поля", Toast.LENGTH_LONG).show()
             }
         }
     }
